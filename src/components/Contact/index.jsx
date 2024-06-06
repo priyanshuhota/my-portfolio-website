@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+import { Button, Snackbar } from '@mui/material';
 
 const Container = styled.div`
 display: flex;
@@ -113,6 +113,7 @@ const ContactButton = styled.input`
   background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   padding: 13px 16px;
   margin-top: 2px;
+  cursor: pointer;  
   border-radius: 12px;
   border: none;
   color: ${({ theme }) => theme.text_primary};
@@ -130,7 +131,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_rzq26xk', 'template_q8yo4vg', form.current, 'Stemplate_q8yo4vg')
+    emailjs.sendForm('service_rzq26xk', 'template_q8yo4vg', form.current, 'mN63-GUvgZbSJr30U')
       .then((result) => {
         setOpen(true);
         form.current.reset();
